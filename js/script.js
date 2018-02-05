@@ -17,10 +17,10 @@
 
 // Songs
 var mySong = {
-	"title":"24K Magic",
-	"artist":"Bruno Mars",
-	"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+	"title":"Downtown",
+	"artist":"Anitta ft. Jbalvin",
+	"mp3Url":"https://www.youtube.com/watch?v=qu5l42GFgFc",
+	"imageUrl":"https://i.scdn.co/image/fba406f05dd5f28dc81873ef7f798149f177af02",
 }
 
 var myPlayList = [
@@ -49,9 +49,10 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  
-
-
+    $('body').append(`<p> Title: ${mySong.title} </p>`);
+    $('body').append(`<p> Artist: ${mySong.artist} </p>`);
+    $('body').append(`<p>mp3-url: <a href= "${mySong.mp3Url}">downtown</a></p>`);
+    $('body').append(`<p>mp3-url ${mySong.imageUrl}</p>`);
 
 });
 
