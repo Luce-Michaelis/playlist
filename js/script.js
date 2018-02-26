@@ -16,12 +16,6 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 // Songs
-var mySong = {
-	"title":"Downtown",
-	"artist":"Anitta ft. Jbalvin",
-	"mp3Url":"https://www.youtube.com/watch?v=qu5l42GFgFc",
-	"imageUrl":"https://i.scdn.co/image/fba406f05dd5f28dc81873ef7f798149f177af02",
-}
 
 var myPlayList = [
 	{
@@ -34,14 +28,14 @@ var myPlayList = [
 	{
 		"title":"La Modelo",
 		"artist":"Ozuna ft Cardi B",
-		"mp3-url":"https://www.youtube.com/watch?v=EH2XAe7ayy0",
-		"image-url":"https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/b6/70/4c/b6704c61-a452-e495-d0fc-1aabc2ed0691/697691884097.jpg/268x0w.jpg",
+		"mp3Url":"https://www.youtube.com/watch?v=EH2XAe7ayy0",
+		"imageUrl":"https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/b6/70/4c/b6704c61-a452-e495-d0fc-1aabc2ed0691/697691884097.jpg/268x0w.jpg",
 	},
 	{
 		"title":"Dura",
 		"artist":"Daddy Yankee",
-		"mp3-url":"https://www.youtube.com/watch?v=xaDUws6snrQ",
-		"image-url":"http://4.bp.blogspot.com/-MOndwp8u93g/WmDhWAfRuTI/AAAAAAAAADs/aVNxtE_hExEx2woDBixTkt838IcSG3p0ACK4BGAYYCw/s1600/Dura%2B-%2BSingle.jpg",
+		"mp3Url":"https://www.youtube.com/watch?v=xaDUws6snrQ",
+		"imageUrl":"http://4.bp.blogspot.com/-MOndwp8u93g/WmDhWAfRuTI/AAAAAAAAADs/aVNxtE_hExEx2woDBixTkt838IcSG3p0ACK4BGAYYCw/s1600/Dura%2B-%2BSingle.jpg",
 	}
 
 ]
@@ -50,18 +44,34 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-	    $('body').append(`<img src="${mySong.imageUrl}">`);
-    $('body').append(`<p> Title: ${mySong.title} </p>`);
-    $('body').append(`<p> Artist: ${mySong.artist} </p>`);
-    $('body').append(`<p>mp3-url: <a href= "${mySong.mp3Url}">downtown</a></p>`);
-
+	    
+displayList()
 
 });
 
+
 function displayList(){
+	
+	myPlayList.forEach(function(song){
+	var title = song.title;
+	var artist = song.artist;
+	var mp3Url= song.mp3Url;
+	var imageUrl = song.imageUrl;
+
+	   
+	   //<figure class=”frame”>
+	//<img src=${source}>
+ //	<figcaption>${title} by ${artist}</figcaption>
+  // </figure>
+ 
+ 	$('body').append(`<p> Title: ${title} </p>`);
+   $('body').append(`<p> Artist: ${artist} </p>`);
+  $('body').append(`<p>mp3Url: <a href= "${mp3Url}"></a></p>`);
+   $('body').append(`<p>imgUrl; <img src ="${imageUrl}"></p>`)
 
 
-  
+
+	});
 }
 
 function clearList(){
